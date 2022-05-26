@@ -37,6 +37,7 @@ def fetch_resources(uri, rel):
         path = os.path.join(settings.MEDIA_ROOT, uri.replace(settings.MEDIA_URL, ""))
     elif uri.startswith("data:image/jpg"):
         path = uri
+        return path
     else:
         path = os.path.join(settings.STATIC_ROOT, uri)
 
